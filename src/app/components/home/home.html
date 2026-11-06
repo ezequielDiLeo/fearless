@@ -1,0 +1,104 @@
+<app-nav-bar></app-nav-bar>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+
+    <!-- VIDEO DE FONDO -->
+    <video
+      #bgVideo
+      class="hero__video"
+      [class.hero__video--hidden]="videoFailed"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      aria-hidden="true"
+      (error)="onVideoError()"
+    >
+      <source src="fear-vid.mp4" type="video/mp4" />
+    </video>
+
+    <!-- OVERLAYS -->
+    <div class="hero__overlay"></div>
+    <div class="hero__vignette"></div>
+
+    <!-- CONTENIDO -->
+    <div class="hero__content">
+
+      <div class="hero__brand">
+        <!-- <img
+          src="invert2-.png"
+          alt="Fearless Salon"
+          class="hero__logo"
+        /> -->
+
+        <span class="hero__eyebrow">
+          HAIR · BEAUTY · EXPERIENCE
+        </span>
+      </div>
+
+      <div class="hero__heading">
+
+        <h1>
+          BE BOLD.
+          <span>BE FEARLESS.</span>
+        </h1>
+
+        <p class="hero__description">
+          Tu estilo no tiene límites.
+          Animate a descubrir una nueva versión de vos.
+        </p>
+
+      </div>
+
+      <div class="hero__actions">
+
+        <a
+          class="hero__button"
+          href="https://l.instagram.com/?u=https%3A%2F%2Fes.fresha.com%2Fbook-now%2Ffearless-salon-vzedvt5q%2Fall-offer%3Fid%3D556148%26pId%3D520097%26fbclid%3DPAZXh0bgNhZW0CMTEAAadpUUr9hoXSK4DPv2_zvXXOCZkE5l0TefHluzF18IMP6dKdC8rkxAUk09FvMA_aem_ihjrA2Fa58SzfJIkP42Ylg&e=AT2NX6suz0AghfakE8vjvRWr-CGXHYBBHkc46rwnPqYoOq-aUjOmnzv7W73cx2zyI1cprJCSk5SDfbN9ym-aQoIzaQx841RZCggpXePJ2w"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>RESERVAR TURNO</span>
+          <span class="hero__button-icon">↗</span>
+        </a>
+
+        <span class="hero__availability">
+          TU PRÓXIMA EXPERIENCIA EMPIEZA ACÁ
+        </span>
+
+      </div>
+
+    </div>
+
+    <!-- PIE DEL HERO -->
+    <div class="hero__footer">
+
+      <span>FEARLESS SALON</span>
+
+      <div class="hero__scroll">
+        <span>SCROLL TO DISCOVER</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+
+      <span>BUENOS AIRES · ARGENTINA</span>
+
+    </div>
+
+  </section>
+
+  <!-- RESTO DEL SITIO -->
+  <app-about-us></app-about-us>
+
+  <app-team></app-team>
+
+  <app-giftcard></app-giftcard>
+
+  <app-reviews></app-reviews>
+
+</main>
+
+<app-footer></app-footer>

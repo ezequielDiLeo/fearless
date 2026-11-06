@@ -1,0 +1,229 @@
+
+<div class="header-wrapper" [class.is-scrolled]="isScrolled()">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar__container container">
+
+      <div class="topbar__info">
+        <a href="tel:+5491123888962" class="topbar__text">
+          <i class="fa-solid fa-phone"></i>
+          +54 9 11 2388-8962
+        </a>
+
+        <span class="topbar__text">
+          <i class="fa-regular fa-clock"></i>
+          Mar. a sáb. · 10:00 a 20:00 hs
+        </span>
+      </div>
+
+      <div class="topbar__social">
+        <a
+          href="https://www.instagram.com/fearless_salon/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram de Fearless Salon">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.facebook.com/fearless.studio.5"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook de Fearless Salon">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://wa.me/5491123888962"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp de Fearless Salon">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HEADER PRINCIPAL -->
+  <header class="header">
+    <div class="header__container container">
+
+      <!-- BRAND -->
+      <a
+        routerLink="/home"
+        class="header__brand"
+        aria-label="Fearless Salon - Inicio">
+
+        <img
+          src="iconoFWB.png"
+          alt="Fearless Salon"
+          class="header__logo">
+      </a>
+
+      <!-- DESKTOP NAVIGATION -->
+      <nav class="header__nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+
+          <li>
+            <a href="#inicio" class="nav-list__link">
+              Inicio
+            </a>
+          </li>
+
+          <li>
+            <a href="#equipo" class="nav-list__link">
+              Equipo
+            </a>
+          </li>
+
+          <li>
+            <a href="#nosotros" class="nav-list__link">
+              Nosotros
+            </a>
+          </li>
+
+          <li>
+            <a href="#contacto" class="nav-list__link">
+              Contacto
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- DESKTOP CTA -->
+      <a
+        href="https://wa.me/5491123888962"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="header__cta">
+
+        <span>Reservar turno</span>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+
+      <!-- MOBILE TOGGLE -->
+      <button
+        class="header__toggle"
+        type="button"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="isMenuOpen()"
+        aria-controls="mobile-navigation"
+        [attr.aria-label]="isMenuOpen() ? 'Cerrar menú' : 'Abrir menú'">
+
+        <i
+          class="fa-solid"
+          [ngClass]="isMenuOpen() ? 'fa-xmark' : 'fa-bars'">
+        </i>
+
+      </button>
+
+    </div>
+  </header>
+</div>
+
+<!-- MOBILE BACKDROP -->
+<div
+  class="mobile-backdrop"
+  [class.mobile-backdrop--visible]="isMenuOpen()"
+  [attr.aria-hidden]="!isMenuOpen()"
+  (click)="closeMenu()">
+</div>
+
+<!-- MOBILE MENU -->
+<aside
+  id="mobile-navigation"
+  class="mobile-menu"
+  [class.mobile-menu--open]="isMenuOpen()"
+  [attr.aria-hidden]="!isMenuOpen()">
+
+  <div class="mobile-menu__header">
+
+    <span class="mobile-menu__eyebrow">
+      FEARLESS SALON
+    </span>
+
+    <button
+      class="mobile-menu__close"
+      type="button"
+      (click)="closeMenu()"
+      aria-label="Cerrar menú">
+
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+  </div>
+
+  <nav class="mobile-menu__nav" aria-label="Navegación móvil">
+
+    <ul class="mobile-menu__list">
+
+      <li>
+        <a href="#inicio" (click)="closeMenu()" class="mobile-menu__link">
+          <span>01</span>
+          Inicio
+        </a>
+      </li>
+
+      <li>
+        <a href="#equipo" (click)="closeMenu()" class="mobile-menu__link">
+          <span>02</span>
+          Equipo
+        </a>
+      </li>
+
+      <li>
+        <a href="#nosotros" (click)="closeMenu()" class="mobile-menu__link">
+          <span>03</span>
+          Nosotros
+        </a>
+      </li>
+
+      <li>
+        <a href="#contacto" (click)="closeMenu()" class="mobile-menu__link">
+          <span>04</span>
+          Contacto
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+  <div class="mobile-menu__footer">
+
+    <a
+      href="https://wa.me/5491123888962"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mobile-menu__cta">
+
+      <i class="fa-brands fa-whatsapp"></i>
+      Reservar turno
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+    </a>
+
+    <div class="mobile-menu__social">
+      <a href="https://www.instagram.com/fearless_salon/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Instagram
+      </a>
+
+      <a href="https://www.facebook.com/fearless.studio.5"
+         target="_blank"
+         rel="noopener noreferrer">
+        Facebook
+      </a>
+    </div>
+
+    <span class="mobile-menu__hours">
+      MARTES A SÁBADO · 10:00 — 20:00 HS
+    </span>
+
+  </div>
+
+</aside>

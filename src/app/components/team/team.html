@@ -1,0 +1,89 @@
+
+<section class="team-section" id="equipo">
+
+  <!-- INTRO -->
+  <div class="team-header">
+
+    <div class="team-heading">
+      <span class="team-eyebrow">
+        THE PEOPLE BEHIND THE STYLE
+      </span>
+
+      <h2 class="team-title">
+        El talento
+        <span>hace la diferencia.</span>
+      </h2>
+    </div>
+
+    <div class="team-description">
+      <span class="team-description-line"></span>
+
+      <p>
+        Detrás de cada transformación hay una persona,
+        una mirada y una pasión por lo que hace.
+        Conocé al equipo que le da vida a Fearless.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- TEAM GRID -->
+  <div class="team-grid">
+
+    <article
+      class="team-card"
+      *ngFor="let miembro of equipo; let i = index"
+    >
+
+      <div class="team-card-image">
+
+        <img
+          [src]="miembro.foto"
+          [alt]="'Retrato de ' + miembro.nombre"
+          loading="lazy"
+        />
+
+        <div class="team-card-gradient"></div>
+
+        <span class="team-card-number">
+          0{{ i + 1 }}
+        </span>
+
+        <span class="team-card-brand">
+          FEARLESS SALON
+        </span>
+
+        <div class="team-card-info">
+
+          <span class="team-card-label">
+            THE FEARLESS TEAM
+          </span>
+
+          <h3>{{ miembro.nombre }}</h3>
+
+          <button
+            type="button"
+            class="team-booking"
+            (click)="sacarTurno(miembro)"
+            [attr.aria-label]="'Reservar un turno con ' + miembro.nombre"
+          >
+            <span>RESERVAR CON {{ miembro.nombre | uppercase }}</span>
+            <span class="team-booking-arrow">↗</span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="team-footer">
+    <span class="team-footer-line"></span>
+    <p>GOOD PEOPLE. GREAT STYLE. FEARLESS ATTITUDE.</p>
+    <span class="team-footer-line"></span>
+  </div>
+
+</section>

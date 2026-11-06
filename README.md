@@ -1,59 +1,119 @@
-# Fearless
+# FEARLESS SALON
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.6.
+**Modern Beauty & Hair Experience**
 
-## Development server
+Sitio web desarrollado para Fearless Salon, un salón de belleza y barbería ubicado en Lanús Oeste, Buenos Aires, Argentina.
 
-To start a local development server, run:
+El proyecto busca transmitir la identidad de la marca a través de una experiencia digital moderna, elegante y visualmente atractiva, facilitando el acceso a información sobre el salón, sus profesionales, servicios y canales de contacto.
+
+## 🌐 Live Demo
+
+[Visitar Fearless Salon](https://fearless-salon.vercel.app/)
+
+## ✨ Features
+
+- **Responsive Design:** Adaptación a dispositivos móviles, tablets y desktop.
+- **Modern UI:** Interfaz visual con una identidad estética alineada con la marca.
+- **Video Hero Section:** Video de fondo con reproducción automática y contenido superpuesto.
+- **Navigation System:** Navegación entre secciones y menú mobile interactivo.
+- **Team Section:** Presentación del equipo de profesionales.
+- **Gift Cards:** Sección dedicada a tarjetas de regalo.
+- **Google Reviews:** Integración de reseñas de clientes.
+- **Contact & Social Media:** Acceso directo a WhatsApp, Instagram y otros canales de contacto.
+- **Online Booking:** Acceso al sistema externo de reservas.
+
+## 🛠️ Tech Stack
+
+| Technology | Usage |
+|---|---|
+| Angular | Frontend framework |
+| TypeScript | Application logic |
+| HTML5 | Structure |
+| SCSS | Styling and responsive layouts |
+| Angular Router | Navigation |
+| Font Awesome | Icons |
+| Google Fonts | Typography |
+
+## 📁 Project Structure
+
+```text
+src/
+├── app/
+│   ├── components/
+│   │   ├── nav-bar/
+│   │   ├── about-us/
+│   │   ├── team/
+│   │   ├── giftcard/
+│   │   ├── reviews/
+│   │   └── footer/
+│   │
+│   ├── pages/
+│   │   └── home/
+│   │
+│   ├── app.ts
+│   ├── app.html
+│   ├── app.config.ts
+│   └── app.routes.ts
+│
+├── assets/
+└── styles.scss
+```
+
+*Project structure simplified for documentation purposes.*
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+- Angular CLI
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone YOUR_REPOSITORY_URL
+```
+
+Navigate to the project directory:
+
+```bash
+cd fearless-salon
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open your browser at:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📱 Responsive Experience
 
-```bash
-ng generate --help
-```
+The interface is designed to provide a consistent experience across different screen sizes, with dedicated navigation and layout adaptations for mobile devices.
 
-## Building
+## 👨‍💻 Development
 
-To build the project run:
+Designed and developed by **Ezequiel Di Leo**.
 
-```bash
-ng build
-```
+Frontend development focused on component architecture, reusable UI elements, responsive layouts and user experience.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<p align="center">
+  <strong>FEARLESS SALON</strong><br>
+  <sub>BE BOLD. BE FEARLESS.</sub>
+</p>
